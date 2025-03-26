@@ -84,6 +84,6 @@ print(f"RSI (14): {rsi_calculado:.2f}" if pd.notna(rsi_calculado) else "Erro no 
 sinal_trade = calcular_sinal(preco_atual, sma_calculado, rsi_calculado)
 print(f"SINAL GERADO: {sinal_trade}")
 
-# Envia sinal ao Telegram caso os dados sejam válidos
+# Envia sinal ao Telegram caso os dados sejam válidos **
 if sinal_trade != "DADOS INSUFICIENTES":
     asyncio.run(enviar_alerta_telegram(sinal_trade, preco_atual))
